@@ -1,4 +1,3 @@
-import Hero from "@/components/sections/Hero";
 import AboutHero from "@/components/sections/AboutHero";
 import WhoWeAre from "@/components/sections/WhoWeAre";
 import MissionVision from "@/components/sections/MissionVision";

@@ -1,14 +1,14 @@
 import UniversitiesGrid from "@/components/sections/UniversitiesGrid";
-import usaUniversities from "../../../data/usaUniversities";
+import ukUniversities from "../../../data/ukUniversities";
 
-const USAUniversities = () => {
+const UKUniversities = () => {
   return (
     <UniversitiesGrid
-      title="Popular Universities in USA"
+      title="Popular Universities in UK"
       description="We collaborate with leading universities across the globe to help students access world-class education and opportunities."
-      universities={usaUniversities}
+      universities={ukUniversities}
     />
   );
 };
 
-export default USAUniversities;
+export default UKUniversities;

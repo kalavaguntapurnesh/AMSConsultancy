@@ -1,3 +1,5 @@
+import SectionText from "@/components/ui/SectionText";
+
 const StudyDestinations = () => {
   const destinations = [
     {
@@ -17,7 +19,8 @@ const StudyDestinations = () => {
     },
     {
       name: "Canada",
-      image: "https://plus.unsplash.com/premium_photo-1694475393287-88027e0fbde4?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      image:
+        "https://plus.unsplash.com/premium_photo-1694475393287-88027e0fbde4?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     },
     {
       name: "Germany",
@@ -31,11 +34,13 @@ const StudyDestinations = () => {
     },
     {
       name: "New Zealand",
-      image: "https://images.unsplash.com/photo-1653829131425-e8d4908a32e9?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      image:
+        "https://images.unsplash.com/photo-1653829131425-e8d4908a32e9?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     },
     {
       name: "Dubai",
-      image: "https://plus.unsplash.com/premium_photo-1697729914552-368899dc4757?q=80&w=2824&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      image:
+        "https://plus.unsplash.com/premium_photo-1697729914552-368899dc4757?q=80&w=2824&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     },
   ];
 
@@ -47,11 +52,11 @@ const StudyDestinations = () => {
           Your Perfect Study Destination is Just One Click Away
         </h2>
 
-        <p className="mt-4 text-gray-500 font-light text-lg">
+        <SectionText align="start" className="mt-6">
           Choose from top countries like Australia, the USA, Canada, the UK, and
           more. We’ll help you find the best universities, scholarships, and
           opportunities—fast and easy.
-        </p>
+        </SectionText>
 
         {/* Grid */}
         <div className="mt-12 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">

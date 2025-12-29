@@ -4,6 +4,8 @@ import {
   HiOutlineHeart,
   HiOutlineArrowPath,
 } from "react-icons/hi2";
+import SectionHeading from "@/components/ui/SectionHeading";
+import SectionText from "@/components/ui/SectionText";
 
 const WhoWeAre = () => {
   return (
@@ -11,20 +13,14 @@ const WhoWeAre = () => {
       <div className="max-w-350 mx-auto px-4">
         {/* SECTION HEADER */}
         <div className="text-center mx-auto">
-          <div className="flex items-center justify-center gap-6 mb-14">
-            <span className="h-px w-32 bg-brand" />
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900">
-              Who We Are
-            </h2>
-            <span className="h-px w-32 bg-brand" />
-          </div>
+          <SectionHeading title="Who We Are" />
 
-          <p className="mt-6 text-lg text-gray-600 font-light">
+          <SectionText align="center" className="mt-8">
             Alcheminds is a global education consultancy built on trust,
             expertise, and a student-first philosophy. We help learners unlock
             international opportunities through personalized guidance and
             world-class university partnerships.
-          </p>
+          </SectionText>
         </div>
 
         {/* FEATURE GRID */}

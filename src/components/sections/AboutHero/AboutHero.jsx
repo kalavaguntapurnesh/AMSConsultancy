@@ -1,19 +1,15 @@
+import SectionHeading from "@/components/ui/SectionHeading";
+import SectionText from "@/components/ui/SectionText";
+
 const AboutHero = () => {
   return (
     <section className="bg-white pt-24">
       <div className="max-w-350 mx-auto px-4 py-8">
         {/* HEADING */}
 
-        <div className="flex items-center justify-center gap-6 mb-14">
-          <span className="h-px w-32 bg-brand" />
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900">
-            About Us
-          </h2>
-          <span className="h-px w-32 bg-brand" />
-        </div>
+        <SectionHeading title="About Us" />
 
-        {/* DESCRIPTION */}
-        <p className="mt-8 mx-auto text-center text-lg text-gray-600 font-light">
+        <SectionText align="center" className="mt-8">
           Welcome to Alcheminds, your gateway to affordable, high-quality
           education and global opportunities. We are committed to making
           international education accessible without compromising excellence.
@@ -24,7 +20,7 @@ const AboutHero = () => {
           in an ever-evolving academic landscape. Whether you are a beginner or
           a professional looking to upskill, we stand beside you at every step
           of your global education journey.
-        </p>
+        </SectionText>
 
         {/* TEAM IMAGE */}
         <div className="mt-8">

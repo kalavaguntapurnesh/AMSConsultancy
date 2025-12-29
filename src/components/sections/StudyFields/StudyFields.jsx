@@ -11,6 +11,8 @@ import {
   FaUserNurse,
 } from "react-icons/fa";
 import { AiFillMedicineBox } from "react-icons/ai";
+import SectionText from "@/components/ui/SectionText";
+import SectionHeading from "@/components/ui/SectionHeading";
 
 const StudyFields = () => {
   const fields = [
@@ -82,18 +84,12 @@ const StudyFields = () => {
   return (
     <section className="bg-white py-20">
       <div className="max-w-350 mx-auto px-4">
-        <div className="flex items-center justify-center gap-6 mb-14">
-          <span className="h-px w-32 bg-brand" />
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900">
-            What Would You Like To Study?
-          </h2>
-          <span className="h-px w-32 bg-brand" />
-        </div>
+        <SectionHeading title="What Would You Like To Study?" />
 
-        <p className="mt-2 mb-8 text-center text-gray-500 font-light text-lg">
+        <SectionText align="center" className="mt-2 mb-8">
           Explore popular fields of study and find the program that aligns with
           your goals, interests, and future career plans.
-        </p>
+        </SectionText>
 
         <div className="relative">
           {/* Left Arrow */}

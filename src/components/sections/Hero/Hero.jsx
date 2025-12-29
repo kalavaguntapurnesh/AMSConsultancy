@@ -5,6 +5,7 @@ import {
   HiOutlineUsers,
 } from "react-icons/hi2";
 import { useNavigate } from "react-router-dom";
+import SectionText from "@/components/ui/SectionText";
 
 const Hero = () => {
   const navigate = useNavigate();
@@ -15,11 +16,11 @@ const Hero = () => {
         <div className="grid lg:grid-cols-2 grid-cols-1 gap-10 items-center">
           {/* LEFT CONTENT */}
           <div className="">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight text-gray-900">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight text-gray-800">
               Your Journey to Global Education starts with{" "}
               <br className="hidden lg:block" />
               <span className="block mt-2">
-                <span className="relative inline-block font-bold">
+                <span className="relative inline-block font-extrabold">
                   <span className="relative z-10">Alcheminds</span>
 
                   {/* Scribble cross-out underline (below text) */}
@@ -57,10 +58,10 @@ const Hero = () => {
               </span>
             </h1>
 
-            <p className="mt-6 max-w-xl text-gray-500 font-light text-lg">
+            <SectionText align="start" className="mt-6" width="xl">
               Ready to start your overseas education journey? Reach out to one
               of Alcheminds expert country counsellors today!
-            </p>
+            </SectionText>
 
             {/* CTA BUTTONS */}
             <div className="mt-8 flex flex-wrap gap-4">

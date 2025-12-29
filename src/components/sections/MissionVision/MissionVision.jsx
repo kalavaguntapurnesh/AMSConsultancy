@@ -1,4 +1,5 @@
 import { HiOutlineFlag, HiOutlineLightBulb } from "react-icons/hi2";
+import SectionHeading from "../../ui/SectionHeading";
 
 const MissionVision = () => {
   return (
@@ -6,13 +7,7 @@ const MissionVision = () => {
       <div className="max-w-350 mx-auto px-4">
         {/* SECTION HEADER */}
         <div className="text-center mx-auto">
-          <div className="flex items-center justify-center gap-6 mb-6">
-            <span className="h-px w-32 bg-brand" />
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900">
-              Our Mission & Vision
-            </h2>
-            <span className="h-px w-32 bg-brand" />
-          </div>
+          <SectionHeading title="Our Mission & Vision" />
 
           <p className="mt-6 text-lg text-gray-600 font-light">
             What drives us every day and where we are headed as a global

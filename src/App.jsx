@@ -6,6 +6,7 @@ import Home from "@/pages/Home";
 import About from "@/pages/About";
 import Contact from "@/pages/Contact";
 import StudyInUsa from "./pages/StudyInUsa";
+import StudyInUK from './pages/StudyInUK/StudyInUK';
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/study-in-usa" element={<StudyInUsa />} />
+        <Route path="/study-in-uk" element={<StudyInUK />} />
       </Routes>
       <Footer />
     </>

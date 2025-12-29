@@ -9,30 +9,7 @@ import { FaFacebook } from "react-icons/fa";
 import { FiChevronDown } from "react-icons/fi";
 import { FaAngleDown } from "react-icons/fa";
 import { AnimatePresence, motion } from "framer-motion";
-import { FaSackDollar } from "react-icons/fa6";
-import { FaLaptop } from "react-icons/fa";
-import { MdFactory } from "react-icons/md";
-import { FaUsers } from "react-icons/fa";
-import { GrCloudSoftware } from "react-icons/gr";
-import { FaHandshake } from "react-icons/fa";
-import { MdPrivacyTip } from "react-icons/md";
-import { MdSupport } from "react-icons/md";
-import { FaIntercom } from "react-icons/fa6";
 import logo from "@/assets/logos/logo.png";
-import {
-  FaCogs,
-  FaChartBar,
-  FaTools,
-  FaMoneyCheckAlt,
-  FaIndustry,
-  FaLaptopCode,
-  FaUniversity,
-  FaPuzzlePiece,
-  FaLightbulb,
-  FaQuestionCircle,
-  FaLock,
-  FaLifeRing,
-} from "react-icons/fa";
 
 import usaFlag from "@/assets/flags/usa.png";
 import canadaFlag from "@/assets/flags/canada.png";
@@ -114,126 +91,92 @@ const Navbar = () => {
               : "lg:hidden fixed left-0 top-0 w-full h-full bg-white ease-in-out duration-1000 rounded-b-lg z-10 shadow-sm-[0px_2px_3px_-1px_rgba(0,0,0,0.1),0px_1px_0px_0px_rgba(25,28,33,0.02),0px_0px_0px_1px_rgba(25,28,33,0.08)]"
           }
         >
-          <a href="/" className="flex items-center flex-row ml-4 pt-4 ">
-            {/* <img src={HomeImg} alt="logo" className="md:w-8 md:h-8 h-6 w-6 " /> */}
-            <span className="text-2xl ml-1 mt-0.5 transition-all duration-300 ease-in-out text-[#B31942] font-bold">
-              Trescor
-            </span>
+          <a href="/" className="flex items-center flex-row ml-4 pt-6">
+            <img
+              src={logo}
+              alt="company_logo"
+              className="lg:w-48 w-44 h-auto"
+            />
           </a>
 
           <ul className="p-4 mt-4">
             <li className="px-4 py-3">
               <div
-                onClick={() => toggleMobileDropdown("home")}
+                onClick={() => toggleMobileDropdown("study")}
                 className="flex items-center justify-between cursor-pointer text-[#0a3161] font-medium"
               >
-                Our Services
+                Study Destinations
                 <FaAngleDown
                   className={`transition-transform ${
-                    openDropdownMobile === "home"
+                    openDropdownMobile === "study"
                       ? "rotate-180 text-mainColor"
                       : ""
                   }`}
                 />
               </div>
-              <AnimatePresence>
-                {openDropdownMobile === "home" && (
-                  <motion.ul
-                    initial={{ opacity: 0, height: 0 }}
-                    animate={{ opacity: 1, height: "auto" }}
-                    exit={{ opacity: 0, height: 0 }}
-                    className="mt-6 grid grid-cols-2 gap-4"
-                  >
-                    <li className="text-navGray p-2 rounded bg-[#e6e6e6] text-center font-medium flex items-center gap-2 justify-center hover:bg-[#d9d9d9] transition-colors">
-                      <FaCogs className="text-[#0a3161]" />
-                      <a
-                        href="/services-microsoft-dynamics-365-finance"
-                        className="block text-sm text-gray-700"
-                      >
-                        Dynamic F & O
-                      </a>
-                    </li>
-                    <li className="text-navGray p-2 rounded bg-[#e6e6e6] text-center font-medium flex items-center gap-2 justify-center hover:bg-[#d9d9d9] transition-colors">
-                      <FaChartBar className="text-[#0a3161]" />
-                      <a
-                        href="/bi-analytics-services"
-                        className="block text-sm text-gray-700"
-                      >
-                        BI Analytics
-                      </a>
-                    </li>
-                    <li className="text-navGray p-2 rounded bg-[#e6e6e6] text-center font-medium flex items-center gap-2 justify-center hover:bg-[#d9d9d9] transition-colors">
-                      <FaTools className="text-[#0a3161]" />
-                      <a
-                        href="/services-microsoft-dynamics-365-finance"
-                        className="block text-sm text-gray-700"
-                      >
-                        Support & Managed
-                      </a>
-                    </li>
-                  </motion.ul>
-                )}
-              </AnimatePresence>
-            </li>
 
-            <li className="px-4 py-3">
-              <div
-                onClick={() => toggleMobileDropdown("services")}
-                className="flex items-center justify-between cursor-pointer text-[#0a3161] font-medium"
-              >
-                Industries we serve
-                <FaAngleDown
-                  className={`transition-transform ${
-                    openDropdownMobile === "services"
-                      ? "rotate-180 text-mainColor"
-                      : ""
-                  }`}
-                />
-              </div>
               <AnimatePresence>
-                {openDropdownMobile === "services" && (
+                {openDropdownMobile === "study" && (
                   <motion.ul
                     initial={{ opacity: 0, height: 0 }}
                     animate={{ opacity: 1, height: "auto" }}
                     exit={{ opacity: 0, height: 0 }}
                     className="mt-6 grid grid-cols-2 gap-4"
                   >
-                    <li className="text-navGray p-2 rounded bg-[#e6e6e6] text-center font-medium flex items-center gap-2 justify-center">
-                      <FaMoneyCheckAlt className="text-[#0a3161]" />
+                    {[
+                      { name: "USA", flag: usaFlag, link: "/study-in-usa" },
+                      {
+                        name: "Canada",
+                        flag: canadaFlag,
+                        link: "/study-in-canada",
+                      },
+                      {
+                        name: "United Kingdom",
+                        flag: ukFlag,
+                        link: "/study-in-uk",
+                      },
+                      {
+                        name: "Australia",
+                        flag: australiaFlag,
+                        link: "/study-in-australia",
+                      },
+                      {
+                        name: "Ireland",
+                        flag: irelandFlag,
+                        link: "/study-in-ireland",
+                      },
+                      {
+                        name: "Germany",
+                        flag: germanyFlag,
+                        link: "/study-in-germany",
+                      },
+                      {
+                        name: "Japan",
+                        flag: japanFlag,
+                        link: "/study-in-japan",
+                      },
+                      {
+                        name: "India",
+                        flag: indiaFlag,
+                        link: "/study-in-india",
+                      },
+                    ].map((country) => (
                       <a
-                        href="/industries/financial"
-                        className="block text-sm text-gray-700"
+                        key={country.name}
+                        href={country.link}
+                        className="flex items-center gap-3 p-3 rounded-lg bg-[#f3f4f6] hover:bg-[#e5e7eb] transition"
+                        onClick={() => setIsMobileMenuOpen(false)}
                       >
-                        Financial
+                        <img
+                          src={country.flag}
+                          alt={country.name}
+                          className="w-7 h-7 object-contain rounded-sm"
+                        />
+                        <span className="text-sm font-medium text-[#0A3161]">
+                          {country.name}
+                        </span>
                       </a>
-                    </li>
-                    <li className="text-navGray p-2 rounded bg-[#e6e6e6] text-center font-medium flex items-center gap-2 justify-center">
-                      <FaIndustry className="text-[#0a3161]" />
-                      <a
-                        href="/industries/manufacturing"
-                        className="block text-sm text-gray-700"
-                      >
-                        Manufacturing
-                      </a>
-                    </li>
-                    <li className="text-navGray p-2 rounded bg-[#e6e6e6] text-center font-medium flex items-center gap-2 justify-center">
-                      <FaLaptopCode className="text-[#0a3161]" />
-                      <a
-                        href="/industries/financial"
-                        className="block text-sm text-gray-700"
-                      >
-                        Software
-                      </a>
-                    </li>
-                    <li className="text-navGray p-2 rounded bg-[#e6e6e6] text-center font-medium flex items-center gap-2 justify-center">
-                      <FaUniversity className="text-[#0a3161]" />
-                      <a
-                        href="/industries/financial"
-                        className="block text-sm text-gray-700"
-                      >
-                        Public Sector
-                      </a>
-                    </li>
+                    ))}
                   </motion.ul>
                 )}
               </AnimatePresence>
@@ -244,7 +187,7 @@ const Navbar = () => {
                 onClick={() => toggleMobileDropdown("products")}
                 className="flex items-center justify-between cursor-pointer text-[#0a3161] font-medium"
               >
-                Our Solutions
+                Our Services
                 <FaAngleDown
                   className={`transition-transform ${
                     openDropdownMobile === "products"
@@ -253,6 +196,7 @@ const Navbar = () => {
                   }`}
                 />
               </div>
+
               <AnimatePresence>
                 {openDropdownMobile === "products" && (
                   <motion.ul
@@ -261,18 +205,29 @@ const Navbar = () => {
                     exit={{ opacity: 0, height: 0 }}
                     className="mt-6 grid grid-cols-2 gap-4"
                   >
-                    <li className="text-navGray p-2 rounded bg-[#e6e6e6] text-center font-medium flex items-center gap-2 justify-center">
-                      <FaPuzzlePiece className="text-[#0a3161]" />
-                      <a href="/" className="block text-sm text-gray-700">
-                        Integration Consulting
-                      </a>
-                    </li>
-                    <li className="text-navGray p-2 rounded bg-[#e6e6e6] text-center font-medium flex items-center gap-2 justify-center">
-                      <FaLightbulb className="text-[#0a3161]" />
-                      <a href="/" className="block text-sm text-gray-700">
-                        Business Needs
-                      </a>
-                    </li>
+                    {[
+                      "Counselling",
+                      "Test Preparation",
+                      "Country & University Selection",
+                      "Applications & Admission",
+                      "Scholarships",
+                      "Internship",
+                      "Education Loan",
+                      "Visa Processing",
+                      "Allied Services",
+                    ].map((service) => (
+                      <li
+                        key={service}
+                        className="p-2 rounded bg-[#e6e6e6] text-center font-medium hover:bg-[#d9d9d9] transition"
+                      >
+                        <a
+                          href="/services"
+                          className="block text-sm text-gray-700"
+                        >
+                          {service}
+                        </a>
+                      </li>
+                    ))}
                   </motion.ul>
                 )}
               </AnimatePresence>
@@ -283,7 +238,7 @@ const Navbar = () => {
                 onClick={() => toggleMobileDropdown("technologies")}
                 className="flex items-center justify-between cursor-pointer text-[#0a3161] font-medium"
               >
-                About Trescor
+                About Us
                 <FaAngleDown
                   className={`transition-transform ${
                     openDropdownMobile === "technologies"
@@ -292,6 +247,7 @@ const Navbar = () => {
                   }`}
                 />
               </div>
+
               <AnimatePresence>
                 {openDropdownMobile === "technologies" && (
                   <motion.ul
@@ -300,43 +256,35 @@ const Navbar = () => {
                     exit={{ opacity: 0, height: 0 }}
                     className="mt-6 grid grid-cols-2 gap-4"
                   >
-                    <li className="text-navGray p-2 rounded bg-[#e6e6e6] text-center font-medium flex items-center gap-2 justify-center">
-                      <FaQuestionCircle className="text-[#0a3161]" />
-                      <a
-                        href="/about-trescor"
-                        className="block text-sm text-gray-700"
+                    {[
+                      { label: "About Alcheminds", link: "/about" },
+                      { label: "Careers", link: "/careers" },
+                      { label: "News & Press", link: "/news-press" },
+                      { label: "Blogs", link: "/blogs" },
+                    ].map((item) => (
+                      <li
+                        key={item.label}
+                        className="p-2 rounded bg-[#e6e6e6] text-center font-medium hover:bg-[#d9d9d9] transition"
                       >
-                        Why Trescor
-                      </a>
-                    </li>
-                    <li className="text-navGray p-2 rounded bg-[#e6e6e6] text-center font-medium flex items-center gap-2 justify-center">
-                      <FaHandshake className="text-[#0a3161]" />
-                      <a
-                        href="/collaborate-with-us"
-                        className="block text-sm text-gray-700"
-                      >
-                        Collaborate with us
-                      </a>
-                    </li>
-                    <li className="text-navGray p-2 rounded bg-[#e6e6e6] text-center font-medium flex items-center gap-2 justify-center">
-                      <FaLock className="text-[#0a3161]" />
-                      <a
-                        href="/privacy-policy"
-                        className="block text-sm text-gray-700"
-                      >
-                        Privacy Policy
-                      </a>
-                    </li>
+                        <a
+                          href={item.link}
+                          className="block text-sm text-gray-700"
+                        >
+                          {item.label}
+                        </a>
+                      </li>
+                    ))}
                   </motion.ul>
                 )}
               </AnimatePresence>
             </li>
+
             <li className="px-4 py-3">
               <div
                 onClick={() => toggleMobileDropdown("mobile-app")}
                 className="flex items-center justify-between cursor-pointer text-[#0a3161] font-medium"
               >
-                Need Support
+                Upcoming Events
                 <FaAngleDown
                   className={`transition-transform ${
                     openDropdownMobile === "mobile-app"
@@ -345,6 +293,7 @@ const Navbar = () => {
                   }`}
                 />
               </div>
+
               <AnimatePresence>
                 {openDropdownMobile === "mobile-app" && (
                   <motion.ul
@@ -353,24 +302,23 @@ const Navbar = () => {
                     exit={{ opacity: 0, height: 0 }}
                     className="mt-6 grid grid-cols-2 gap-4"
                   >
-                    <li className="text-navGray p-2 rounded bg-[#e6e6e6] text-center font-medium flex items-center gap-2 justify-center">
-                      <FaLifeRing className="text-[#0a3161]" />
-                      <a
-                        href="/contact-trescor"
-                        className="block text-sm text-gray-700"
+                    {[
+                      { label: "Support", link: "/support" },
+                      { label: "Contact Us", link: "/contact" },
+                      { label: "Upcoming Events", link: "/events" },
+                    ].map((item) => (
+                      <li
+                        key={item.label}
+                        className="p-2 rounded bg-[#e6e6e6] text-center font-medium hover:bg-[#d9d9d9] transition"
                       >
-                        Contact Us
-                      </a>
-                    </li>
-                    <li className="text-navGray p-2 rounded bg-[#e6e6e6] text-center font-medium flex items-center gap-2 justify-center">
-                      <FaLifeRing className="text-[#0a3161]" />
-                      <a
-                        href="/dynamics-365-support-services"
-                        className="block text-sm text-gray-700"
-                      >
-                        Find with us
-                      </a>
-                    </li>
+                        <a
+                          href={item.link}
+                          className="block text-sm text-gray-700"
+                        >
+                          {item.label}
+                        </a>
+                      </li>
+                    ))}
                   </motion.ul>
                 )}
               </AnimatePresence>
@@ -379,7 +327,7 @@ const Navbar = () => {
             <li className="px-4 mt-10 w-full flex justify-center items-center">
               <a
                 onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-                className="border relative py-2.5 bg-trumpOne text-white rounded-full border-[#0a3161] text-sm bg-[#0a3161]  flex justify-center items-center font-semibold overflow-hidden text-center w-[100%]"
+                className="border relative py-2.5 bg-trumpOne text-white rounded-full border-brand text-sm bg-brand flex justify-center items-center font-semibold overflow-hidden text-center w-[100%]"
               >
                 <span className="relative z-10">Close</span>
               </a>
@@ -387,38 +335,38 @@ const Navbar = () => {
           </ul>
 
           <div className="px-4">
-            <h5 className="p-4 text-xl text-center text-[#0a3161] font-semibold">
+            <h5 className="p-4 text-xl text-center text-black font-semibold">
               Follow us on
             </h5>
             <div className="p-4">
               <div className="grid grid-cols-5 ">
                 <div className="flex justify-center items-center">
                   <a href="https://www.linkedin.com/in/trescor-software-546012369/">
-                    <FaLinkedinIn className="w-6 h-6 text-[#0a3161] duration-1000 hover:text-mainColor ease-in-out " />
+                    <FaLinkedinIn className="w-6 h-6 text-black duration-1000 hover:text-mainColor ease-in-out " />
                   </a>
                 </div>
                 <div className="flex justify-center items-center">
                   <a href="https://x.com/Trescor1226">
-                    <FaXTwitter className="w-6 h-6 text-[#0a3161] duration-1000 hover:text-mainColor ease-in-out" />
+                    <FaXTwitter className="w-6 h-6 text-black duration-1000 hover:text-mainColor ease-in-out" />
                   </a>
                 </div>
                 <div className="flex justify-center items-center">
                   <a href="https://www.instagram.com/trescorsoftware/">
                     {" "}
-                    <FaInstagram className="w-6 h-6 text-[#0a3161] duration-1000 hover:text-mainColor ease-in-out" />
+                    <FaInstagram className="w-6 h-6 text-black duration-1000 hover:text-mainColor ease-in-out" />
                   </a>
                 </div>
                 <div className="flex justify-center items-center">
                   <a href="https://www.facebook.com/profile.php?id=61576887840484">
                     {" "}
-                    <FaFacebook className="w-6 h-6 text-[#0a3161] duration-1000 hover:text-mainColor ease-in-out" />
+                    <FaFacebook className="w-6 h-6 text-black duration-1000 hover:text-mainColor ease-in-out" />
                   </a>
                 </div>
 
                 <div className="flex justify-center items-center">
                   <a href="https://www.threads.com/@trescorsoftware">
                     {" "}
-                    <FaThreads className="w-6 h-6 text-[#0a3161] duration-1000 hover:text-mainColor ease-in-out" />
+                    <FaThreads className="w-6 h-6 text-black duration-1000 hover:text-mainColor ease-in-out" />
                   </a>
                 </div>
               </div>

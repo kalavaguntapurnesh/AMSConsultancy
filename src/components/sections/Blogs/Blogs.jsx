@@ -1,20 +1,22 @@
+import SectionHeading from "@/components/ui/SectionHeading";
+import SectionText from "@/components/ui/SectionText";
+
 const Blogs = () => {
   return (
     <section className="py-8">
       <div className="max-w-350 mx-auto px-4">
         {/* Heading */}
-        <div className="flex items-center justify-center gap-6 mb-14">
-          <span className="h-px w-32 bg-brand" />
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900">
-            Our Blogs
-          </h2>
-          <span className="h-px w-32 bg-brand" />
-        </div>
 
-        <p className="mt-2 mb-8 text-center text-gray-500 font-light text-lg">
+        <SectionHeading title="Our Blogs" />
+
+        <SectionText
+          align="center"
+          className="mb-12"
+          widthClass="full"
+        >
           Explore our latest blogs and articles to stay updated with the current
           trends and insights in the education sector.
-        </p>
+        </SectionText>
 
         <div className="grid grid-cols-2 gap-8">
           {/* LEFT – FEATURED BLOG */}
