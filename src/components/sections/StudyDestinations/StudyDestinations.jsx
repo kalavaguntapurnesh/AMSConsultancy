@@ -1,24 +1,29 @@
 import SectionText from "@/components/ui/SectionText";
+import { link } from "framer-motion/client";
 
 const StudyDestinations = () => {
   const destinations = [
     {
       name: "USA",
+      link:"/study-in-usa",
       image:
         "https://images.unsplash.com/photo-1480714378408-67cf0d13bc1b?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     },
     {
       name: "UK",
+      link:"/study-in-uk",
       image:
         "https://images.unsplash.com/photo-1454537468202-b7ff71d51c2e?q=80&w=2938&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     },
     {
       name: "Australia",
+      link:"/study-in-australia",
       image:
         "https://images.unsplash.com/photo-1605578298583-e935687f3e0a?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     },
     {
       name: "Canada",
+      link:"/study-in-canada",
       image:
         "https://plus.unsplash.com/premium_photo-1694475393287-88027e0fbde4?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     },
@@ -29,6 +34,7 @@ const StudyDestinations = () => {
     },
     {
       name: "Ireland",
+      link:"/study-in-ireland",
       image:
         "https://images.unsplash.com/photo-1590089415225-401ed6f9db8e?q=80&w=2574&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     },
@@ -61,7 +67,8 @@ const StudyDestinations = () => {
         {/* Grid */}
         <div className="mt-12 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
           {destinations.map((item) => (
-            <div
+            <a
+            href={item.link || "#"}
               key={item.name}
               className="group relative overflow-hidden rounded-2xl cursor-pointer"
             >
@@ -79,7 +86,7 @@ const StudyDestinations = () => {
               <div className="absolute bottom-4 left-4">
                 <h3 className="text-white text-xl font-medium">{item.name}</h3>
               </div>
-            </div>
+            </a>
           ))}
         </div>
       </div>
