@@ -4,6 +4,7 @@ import {
   FaLinkedinIn,
   FaXTwitter,
 } from "react-icons/fa6";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
@@ -65,11 +66,31 @@ const Footer = () => {
           <div>
             <h4 className="text-lg font-semibold mb-4">Study Destinations</h4>
             <ul className="space-y-2 text-sm text-white/70">
-              <li>United States</li>
-              <li>Canada</li>
-              <li>United Kingdom</li>
-              <li>Ireland</li>
-              <li>Australia</li>
+              <li>
+                <Link to="/study-in-usa" className="hover:text-white transition-colors">
+                  United States
+                </Link>
+              </li>
+              <li>
+                <Link to="/study-in-canada" className="hover:text-white transition-colors">
+                  Canada
+                </Link>
+              </li>
+              <li>
+                <Link to="/study-in-uk" className="hover:text-white transition-colors">
+                  United Kingdom
+                </Link>
+              </li>
+              <li>
+                <Link to="/study-in-ireland" className="hover:text-white transition-colors">
+                  Ireland
+                </Link>
+              </li>
+              <li>
+                <Link to="/study-in-australia" className="hover:text-white transition-colors">
+                  Australia
+                </Link>
+              </li>
               <li>New Zealand</li>
             </ul>
           </div>

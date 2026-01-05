@@ -672,8 +672,8 @@ const StudyDestinationsBar = () => {
     { name: "United Kingdom", img: ukFlag, link: "/study-in-uk" },
     { name: "Australia", img: australiaFlag, link: "/study-in-australia" },
     { name: "Ireland", img: irelandFlag, link: "/study-in-ireland" },
-    { name: "Japan", img: japanFlag, link: "/study-in-new-zealand" },
-    { name: "Germany", img: germanyFlag, link: "/study-in-europe" },
+    { name: "Japan", img: japanFlag, link: "/study-in-japan" },
+    { name: "Germany", img: germanyFlag, link: "/study-in-germany" },
     { name: "Asia", img: indiaFlag, link: "/study-in-asia" },
   ];
 

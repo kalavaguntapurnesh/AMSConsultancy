@@ -10,6 +10,8 @@ import StudyInUK from './pages/StudyInUK';
 import StudyInCanada from './pages/StudyInCanada';
 import StudyInAustralia from './pages/StudyInAustralia';
 import StudyInIreland from './pages/StudyInIreland/StudyInIreland';
+import StudyInGermany from './pages/StudyInGermany';
+import StudyInJapan from './pages/StudyInJapan';
 
 function App() {
   return (
@@ -24,6 +26,8 @@ function App() {
         <Route path="/study-in-canada" element={<StudyInCanada />} />
         <Route path="/study-in-australia" element={<StudyInAustralia />} />
         <Route path="/study-in-ireland" element={<StudyInIreland />} />
+        <Route path="/study-in-germany" element={<StudyInGermany />} />
+        <Route path="/study-in-japan" element={<StudyInJapan />} />
 
       </Routes>
       <Footer />
