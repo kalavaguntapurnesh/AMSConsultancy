@@ -10,7 +10,6 @@ import { FiChevronDown } from "react-icons/fi";
 import { FaAngleDown } from "react-icons/fa";
 import { AnimatePresence, motion } from "framer-motion";
 import logo from "@/assets/logos/logo.png";
-
 import usaFlag from "@/assets/flags/usa.png";
 import canadaFlag from "@/assets/flags/canada.png";
 import ukFlag from "@/assets/flags/uk.png";
@@ -199,36 +198,92 @@ const Navbar = () => {
 
               <AnimatePresence>
                 {openDropdownMobile === "products" && (
-                  <motion.ul
+                  <motion.div
                     initial={{ opacity: 0, height: 0 }}
                     animate={{ opacity: 1, height: "auto" }}
                     exit={{ opacity: 0, height: 0 }}
-                    className="mt-6 grid grid-cols-2 gap-4"
+                    className="mt-6 space-y-6"
                   >
-                    {[
-                      "Counselling",
-                      "Test Preparation",
-                      "Country & University Selection",
-                      "Applications & Admission",
-                      "Scholarships",
-                      "Internship",
-                      "Education Loan",
-                      "Visa Processing",
-                      "Allied Services",
-                    ].map((service) => (
-                      <li
-                        key={service}
-                        className="p-2 rounded bg-[#e6e6e6] text-center font-medium hover:bg-[#d9d9d9] transition"
-                      >
-                        <a
-                          href="/services"
-                          className="block text-sm text-gray-700"
-                        >
-                          {service}
-                        </a>
-                      </li>
-                    ))}
-                  </motion.ul>
+                    {/* OUR SERVICES */}
+                    <div>
+                      <h4 className="mb-3 text-sm font-semibold text-[#0A3161] uppercase">
+                        Our Services
+                      </h4>
+                      <ul className="grid grid-cols-2 gap-4">
+                        {[
+                          "Counselling",
+                          "Country & University Selection",
+                          "Applications & Admission",
+                        ].map((service) => (
+                          <li
+                            key={service}
+                            className="p-2 rounded bg-[#e6e6e6] text-center font-medium hover:bg-[#d9d9d9] transition"
+                          >
+                            <a
+                              href="/services"
+                              className="block text-sm text-gray-700"
+                            >
+                              {service}
+                            </a>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+
+                    {/* FINANCIAL SERVICES */}
+                    <div>
+                      <h4 className="mb-3 text-sm font-semibold text-[#0A3161] uppercase">
+                        Financial Services
+                      </h4>
+                      <ul className="grid grid-cols-2 gap-4">
+                        {[
+                          "Scholarships",
+                          "Education Loan",
+                          "Visa Processing",
+                        ].map((service) => (
+                          <li
+                            key={service}
+                            className="p-2 rounded bg-[#e6e6e6] text-center font-medium hover:bg-[#d9d9d9] transition"
+                          >
+                            <a
+                              href="/services"
+                              className="block text-sm text-gray-700"
+                            >
+                              {service}
+                            </a>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+
+                    {/* VISA SERVICES */}
+                    <div>
+                      <h4 className="mb-3 text-sm font-semibold text-[#0A3161] uppercase">
+                        VISA Services
+                      </h4>
+                      <ul className="grid grid-cols-2 gap-4">
+                        {[
+                          "F1 Visa",
+                          "H1B Visa",
+                          "UKVI",
+                          "B1 Visa",
+                          "Tourist Visa",
+                        ].map((service) => (
+                          <li
+                            key={service}
+                            className="p-2 rounded bg-[#e6e6e6] text-center font-medium hover:bg-[#d9d9d9] transition"
+                          >
+                            <a
+                              href="/services"
+                              className="block text-sm text-gray-700"
+                            >
+                              {service}
+                            </a>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  </motion.div>
                 )}
               </AnimatePresence>
             </li>
@@ -327,7 +382,7 @@ const Navbar = () => {
             <li className="px-4 mt-10 w-full flex justify-center items-center">
               <a
                 onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-                className="border relative py-2.5 bg-trumpOne text-white rounded-full border-brand text-sm bg-brand flex justify-center items-center font-semibold overflow-hidden text-center w-[100%]"
+                className="border relative py-2.5 text-white rounded-full border-brand text-sm bg-brand flex justify-center items-center font-semibold overflow-hidden text-center w-[100%]"
               >
                 <span className="relative z-10">Close</span>
               </a>
@@ -470,7 +525,7 @@ const Content = ({ selected, dir }) => {
         opacity: 0,
         y: 8,
       }}
-      className="absolute left-1/2 top-[calc(100%+1px)] w-350 max-w-[90vw] -translate-x-1/2 bg-white rounded-lg shadow overflow-hidden"
+      className="absolute left-[45%] top-[calc(100%+1px)] w-350 max-w-[90vw] -translate-x-1/2 bg-white rounded-lg shadow overflow-hidden"
     >
       <Bridge />
       <Nub selected={selected} />
@@ -537,9 +592,8 @@ const Nub = ({ selected }) => {
 const Homebar = () => {
   return (
     <div className="flex flex-col md:flex-row min-h-75">
-      {/* LEFT SECTION – 30% (AS REQUESTED) */}
+      {/* LEFT SECTION – 30% */}
       <div className="w-full md:w-[30%] relative p-6 rounded-t-lg md:rounded-l-lg md:rounded-tr-none flex items-center bg-[#0A3161] overflow-hidden">
-        {/* Brand accent */}
         <div className="absolute -top-10 -right-10 w-32 h-32 bg-brand rounded-full opacity-30 blur-2xl" />
         <div className="absolute bottom-0 left-0 w-full h-1 bg-brand" />
 
@@ -553,29 +607,68 @@ const Homebar = () => {
 
       {/* RIGHT SECTION – 70% */}
       <div className="w-full md:w-[70%] bg-white p-6 rounded-b-lg md:rounded-r-lg">
-        <div className="grid grid-cols-1 sm:grid-cols-2">
-          {[
-            "Counselling",
-            "Test Preparation",
-            "Country & University Selection",
-            "Applications & Admission",
-            "Scholarships",
-            "Internship",
-            "Education Loan",
-            "Visa Processing",
-            "Allied Services",
-          ].map((service) => (
-            <a
-              key={service}
-              href="/services"
-              className="flex items-center gap-4 p-4 rounded-lg hover:bg-gray-50 transition group"
-            >
-              {/* Text only – no icons */}
-              <span className="font-semibold text-[#0A3161] group-hover:text-brand">
-                {service}
-              </span>
-            </a>
-          ))}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          {/* OUR SERVICES */}
+          <div>
+            <h4 className="my-2 font-extrabold uppercase text-[#0A3161]">
+              Our Services
+            </h4>
+            <div className="space-y-1">
+              {[
+                "Counselling",
+                "Country & University Selection",
+                "Applications & Admission",
+              ].map((service) => (
+                <a
+                  key={service}
+                  href="/services"
+                  className="block p-3 rounded-lg hover:bg-gray-50 transition font-semibold text-[#0A3161] hover:text-brand"
+                >
+                  {service}
+                </a>
+              ))}
+            </div>
+          </div>
+
+          {/* FINANCIAL SERVICES */}
+          <div>
+            <h4 className="my-2 font-extrabold uppercase text-emerald-600">
+              Financial Services
+            </h4>
+            <div className="space-y-1">
+              {["Scholarships", "Education Loan", "Visa Processing"].map(
+                (service) => (
+                  <a
+                    key={service}
+                    href="/services"
+                    className="block p-3 rounded-lg hover:bg-gray-50 transition font-semibold text-[#0A3161] hover:text-brand"
+                  >
+                    {service}
+                  </a>
+                )
+              )}
+            </div>
+          </div>
+
+          {/* VISA SERVICES */}
+          <div>
+            <h4 className="my-2 font-extrabold uppercase text-brand">
+              VISA Services
+            </h4>
+            <div className="space-y-1">
+              {["F1 Visa", "H1B Visa", "UKVI", "Tourist Visa"].map(
+                (service) => (
+                  <a
+                    key={service}
+                    href="/services"
+                    className="block p-3 rounded-lg hover:bg-gray-50 transition font-semibold text-[#0A3161] hover:text-brand"
+                  >
+                    {service}
+                  </a>
+                )
+              )}
+            </div>
+          </div>
         </div>
       </div>
     </div>
