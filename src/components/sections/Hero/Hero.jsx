@@ -182,12 +182,12 @@ const Hero = () => {
                   free 30-minute counselling from our experts.
                 </p>
 
-                <a
-                  href="#"
-                  className="mt-4 inline-block text-brand font-medium underline underline-offset-4"
+                <button
+                  onClick={() => navigate('/admission-guide')}
+                  className="mt-4 inline-block text-brand font-medium underline underline-offset-4 cursor-pointer bg-transparent border-none"
                 >
                   Find Consultant Now
-                </a>
+                </button>
               </div>
             </div>
           </div>

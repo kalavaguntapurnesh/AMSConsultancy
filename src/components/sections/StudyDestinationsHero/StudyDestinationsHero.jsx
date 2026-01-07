@@ -9,7 +9,7 @@ const StudyDestinationsHero = () => {
   ];
 
   return (
-    <section className="bg-gradient-to-r from-purple-400 via-purple-500 to-purple-600 py-16 px-4 mt-20 lg:mt-24">
+    <section className="py-16 px-4 mt-20 lg:mt-24" style={{ background: 'linear-gradient(135deg, #ffc020 0%, #e6ac00 100%)' }}>
       <div className="max-w-7xl mx-auto">
         <div className="flex flex-col lg:flex-row items-center justify-between">
           {/* Left side - Content */}
