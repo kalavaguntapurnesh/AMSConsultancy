@@ -101,10 +101,17 @@ const Footer = () => {
               Services for Students
             </h4>
             <ul className="space-y-2 text-sm text-white/70">
+            <li><Link to="/services" className="hover:text-white transition-colors">
+                  University Selection
+                </Link>
+                </li>
+              <li>
+              <Link to="/admission-guide" className="hover:text-white transition-colors">
+                 Applications & Admission
+                </Link>
+              </li>
               <li>Counselling</li>
               <li>Test Preparation</li>
-              <li>University Selection</li>
-              <li>Applications & Admission</li>
               <li>Scholarships</li>
               <li>Visa Processing</li>
             </ul>
